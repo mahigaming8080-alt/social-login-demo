@@ -1,14 +1,18 @@
 const password = document.getElementById("password");
-const showPassword = document.getElementById("showPassword");
-const demoBtn = document.getElementById("demoBtn");
+const show = document.getElementById("show");
+const form = document.getElementById("loginForm");
+const status = document.getElementById("status");
 
-showPassword.addEventListener("click", () => {
+show.addEventListener("click", () => {
   const hidden = password.type === "password";
   password.type = hidden ? "text" : "password";
-  showPassword.textContent = hidden ? "Hide" : "Show";
+  show.textContent = hidden ? "Hide" : "Show";
 });
 
-demoBtn.addEventListener("click", () => {
-  document.getElementById("username").value = "demo_user";
-  password.value = "demo-password";
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  // Demo only.
+  // No password is stored, emailed, or uploaded.
+  status.textContent = "Demo login completed.";
 });
