@@ -12,7 +12,6 @@ showPassword.addEventListener("click", () => {
 });
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
 
   // Demo only:
   // username/password are NOT sent anywhere.
